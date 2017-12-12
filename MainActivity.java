@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity{
     TextView mTextView;
     TextView mTextView2;
     Button button1;
+    Button buttonTerapy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,14 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 setMyText();
+            }
+        });
+
+        buttonTerapy = (Button) findViewById(R.id.bTeknikker);
+        buttonTerapy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, SwitchToTips.class));
             }
         });
     }
@@ -57,5 +66,7 @@ public class MainActivity extends AppCompatActivity{
         startActivity(intent);
 
     }
+
+    
 }
 
