@@ -1,6 +1,5 @@
 package com.example.oda.mentaloda3;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,8 +22,9 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
 
         mTextView = (TextView) findViewById(R.id.welcome);
-        mTextView.setText(R.string.app_name);
+        //mTextView.setText(R.string.);
         mTextView2 = (TextView) findViewById(R.id.display_info);
+        mTextView2.setText(R.string.ida);
 
         button1 = (Button) findViewById(R.id.button1);
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity{
         } else if(mCount == 3) {
             mTextView2.setText(R.string.s3);
         } else if(mCount == 4){
-            mTextView2.setText(getString(R.string.hvorforCBT));
+            mTextView2.setText(getString(R.string.hvorforMCT));
         }
         mCount +=1;
     }
