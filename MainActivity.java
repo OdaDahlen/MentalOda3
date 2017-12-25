@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity{
     TextView mTextView;
     TextView mTextView2;
     Button button1;
-    Button buttonTerapy;
+    Button buttonTherapy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,11 @@ public class MainActivity extends AppCompatActivity{
         mTextView2.setText(R.string.ida);
 
         button1 = (Button) findViewById(R.id.button1);
+        button1.setVisibility(View.INVISIBLE);
+
+        buttonTherapy = (Button) findViewById(R.id.bTeknikker);
+        buttonTherapy.setVisibility(View.INVISIBLE);
+
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,8 +40,8 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        buttonTerapy = (Button) findViewById(R.id.bTeknikker);
-        buttonTerapy.setOnClickListener(new View.OnClickListener() {
+
+        buttonTherapy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, SwitchToTips.class));
